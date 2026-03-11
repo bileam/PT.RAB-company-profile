@@ -7,10 +7,10 @@ const MainLayout = () => {
   return (
     <div className="flex flex-col min-h-screen relative bg-[#f8fafc]">
       <Navbar />
-      <main className="pt-20 md:pt-22 h-[200vh]">
+      <main className="pt-20 md:pt-22 grow">
         <Outlet />
       </main>
-      <footer className="w-full absolute bottom-0 h-40 bg-gray-100 ">
+      <footer className="w-full  bottom-0 text-white mt-10 ">
         <Footer />
       </footer>
     </div>

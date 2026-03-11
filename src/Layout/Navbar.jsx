@@ -59,7 +59,7 @@ const Navbar = () => {
             <h1 className="text-rab-navy font-extrabold text-[0.9rem] md:text-[1rem]">
               PT. Renol Anugrah Bersama
             </h1>
-            <p className="text-[0.8rem] md:text-[0.9rem] font-bold text-rab-green">
+            <p className="text-[0.8rem]  md:text-[0.9rem] font-bold text-rab-green">
               General Contractor & Supplier
             </p>
           </div>

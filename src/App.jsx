@@ -6,6 +6,7 @@ import Banner from "./Components/Banner";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainLayout from "./Layout/MainLayout";
 import Home from "./Pages/Home";
+import Belajar from "./Pages/Belajar";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +14,8 @@ function App() {
   return (
     <Router>
       <Routes>
+        /
+        <Route path="/belajar" element={<Belajar />} />
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
         </Route>
