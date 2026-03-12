@@ -17,27 +17,26 @@ const Banner = () => {
       <div>
         <img src={gambar} alt="" className="w-full h-screen object-cover" />
       </div>
-      <div className="absolute top-0 bg-rab-dark/50 shadow-5xl  inset-0 flex flex-col  justify-center ">
+      <div className="absolute top-0 bg-rab-dark/40 dark:bg-rab-dark/70  transition-colors duration-300  shadow-5xl  inset-0 flex flex-col  justify-center ">
         <div className=" section-container">
           <h1
             data-aos="fade-up"
             data-aos-delay="200"
-            className="font-heading text-4xl md:text-6xl text-rab-light font-bold leading-tight flex "
+            className="font-heading text-4xl md:text-5xl xl:text-6xl transition-colors duration-700 2xl:text-7xl text-rab-light dark:text-rab-neon font-bold leading-tight flex flex-wrap items-center gap-2"
           >
             Solusi Pembangunan
             <RotatingText
               texts={["Berkualitas", "Kokoh", "Modern", "Elegan", "Terpercaya"]}
-              mainClassName="px-2 sm:px-2 md:px-3  text-[#adff2f] overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+              mainClassName="px-2 md:px-3 text-[#adff2f] dark:text-[#1d4e89]  overflow-hidden py-1 md:py-2 rounded-lg"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "-120%" }}
               staggerDuration={0.025}
-              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              splitLevelClassName="overflow-hidden"
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
               rotationInterval={2000}
             />
-            {/* <span className="text-rab-neon">Terpercaya</span> */}
           </h1>
           <p
             data-aos="fade-up"
@@ -50,7 +49,8 @@ const Banner = () => {
           <button
             data-aos="fade-up"
             data-aos-delay="600"
-            className="mt-8 px-8 py-3 bg-rab-navy text-rab-light font-bold cursor-pointer rounded-lg shadow-lg hover:brightness-110 transition-all"
+            // shadow-lg bg-rab-navy
+            className="mt-8 px-8 py-3  border-2 shadow-lg border-rab-neon hover:bg-rab-neon hover:text-rab-dark  text-rab-light font-bold cursor-pointer rounded-lg duration-500  transition-all"
           >
             Mulai Konsultasi
           </button>

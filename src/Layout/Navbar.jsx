@@ -3,6 +3,7 @@ import logoRab from "../assets/image/NobgLogo.png";
 import burger from "../assets/logo/burger.svg";
 import cancel from "../assets/logo/cancel.svg";
 import { useState, useEffect, useRef } from "react";
+import DarkModeToggle from "../Components/DarkModeToggle";
 
 const Navbar = () => {
   const [isBurger, setBurger] = useState(true);
@@ -48,10 +49,14 @@ const Navbar = () => {
     <nav
       className={`fixed w-full top-0 z-50 transition-all duration-300
       ${showNavbar ? "translate-y-0" : "-translate-y-full"}
-      ${navBg ? "bg-white shadow-lg" : "bg-gray-100"}
+      ${
+        navBg
+          ? "bg-white dark:bg-gray-900 shadow-lg"
+          : "bg-gray-100 dark:bg-gray-800"
+      }
       `}
     >
-      <div className="container mx-auto flex justify-between items-center py-4 md:py-2 px-2 md:px-10 2xl:px-24">
+      <div className="container mx-auto flex justify-between items-center py-4 md:py-2 px-2 md:px-4 2xl:px-24">
         {/* LOGO */}
         <div className="flex gap-2 items-center">
           <img src={logoRab} alt="logo" className="md:w-15 w-10 object-cover" />
@@ -73,11 +78,10 @@ const Navbar = () => {
               to={item.path}
               end={item.path === "/"}
               className={({ isActive }) =>
-                `relative font-heading transition-colors duration-300
-                ${
+                `relative font-heading transition-colors duration-300 ${
                   isActive
-                    ? "text-rab-navy font-bold"
-                    : "text-gray-dark hover:text-rab-navy"
+                    ? "text-rab-navy dark:text-rab-navy font-bold"
+                    : "text-gray-600 dark:text-gray-300 hover:text-rab-navy dark:hover:text-rab-green"
                 }`
               }
             >
@@ -94,25 +98,27 @@ const Navbar = () => {
               )}
             </NavLink>
           ))}
+          <DarkModeToggle />
         </div>
 
         {/* BURGER BUTTON */}
-        <button
-          onClick={() => setBurger((prev) => !prev)}
-          className="md:hidden block"
-        >
-          <img src={isBurger ? burger : cancel} alt="menu" className="w-8" />
-        </button>
+
+        <div className="flex gap-1 items-center md:hidden ">
+          <DarkModeToggle />
+          <button onClick={() => setBurger((prev) => !prev)} className="">
+            <img src={isBurger ? burger : cancel} alt="menu" className="w-8" />
+          </button>
+        </div>
 
         {/* MOBILE MENU */}
         <div
           className={`md:hidden fixed bg-rab-light top-20 w-full left-0 right-0
           flex flex-col gap-6 px-6 pt-6
-          transition-all duration-500 ease-in-out
+          transition-all duration-300 ease-in-out dark:dark:bg-gray-900 
           ${
             isBurger
               ? "opacity-0 -translate-y-5 pointer-events-none"
-              : "opacity-100 translate-y-0 h-screen"
+              : "opacity-100 dark:text-rab-light translate-y-0 h-screen"
           }`}
         >
           {Menu.map((item, index) => (
@@ -125,7 +131,7 @@ const Navbar = () => {
                 ${
                   isActive
                     ? "text-rab-navy font-bold"
-                    : "text-gray-dark hover:text-rab-navy"
+                    : "text-gray-dark hover:text-rab-neon"
                 }`
               }
             >

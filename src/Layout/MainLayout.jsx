@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 const MainLayout = () => {
   return (
-    <div className="flex flex-col min-h-screen relative bg-[#f8fafc]">
+    <div className="flex flex-col min-h-screen relative bg-white dark:bg-gray-900 transition-colors">
       <Navbar />
       <main className="pt-20 md:pt-22 grow">
         <Outlet />

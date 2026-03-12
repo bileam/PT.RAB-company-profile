@@ -2,6 +2,10 @@
 @import "tailwindcss";
 /* Tambahkan di paling atas index.css */
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* flowbite */
+@plugin "flowbite/plugin";
 @theme {
   /* --- Setup Warna Identitas PT. RAB --- */
   --color-rab-navy: #1d4e89; /* Biru Utama Logo */
@@ -35,6 +39,32 @@
 /* responsive conteiner */
 @layer components {
   .section-container {
-    @apply py-0 px-2 md:px-10 2xl:px-24 container mx-auto;
+    @apply py-0 px-2 md:px-4 2xl:px-24 container mx-auto;
+  }
+
+  /* stars modals Home */
+  .rab-title {
+    @apply text-rab-navy dark:text-rab-neon transition-colors;
+  }
+  .rab-p {
+    @apply dark:text-rab-light transition-colors duration-300;
+  }
+
+  .rab-button {
+    @apply text-rab-green dark:text-rab-navy  transition-all duration-300;
+  }
+  .rab-button-row {
+    @apply bg-rab-neon dark:bg-rab-navy transition-all duration-500;
+  }
+
+  /* end Modals home */
+
+  /* basic dark mode */
+  .rab-p-light {
+    @apply text-rab-light dark:text-rab-dark transition-colors duration-300;
+  }
+
+  .rab-title-navy {
+    @apply text-rab-navy dark:text-rab-neon transition-colors duration-300;
   }
 }

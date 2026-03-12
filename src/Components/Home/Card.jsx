@@ -17,12 +17,12 @@ const Card = ({ logo, title, desc, buttonTitle, aos, delay }) => {
     >
       <img src={logo} alt={logo} className="w-15 h-15  " />
       <div className="flex flex-col">
-        <h1 className="text-rab-navy font-bold">{title}</h1>
-        <p className="text-[0.9rem]">{desc}</p>
+        <h1 className=" rab-title font-bold">{title}</h1>
+        <p className="text-[0.9rem] rab-p">{desc}</p>
         <div className="">
-          <button className="font-bold text-sm  mt-2 text-rab-green cursor-pointer  overflow-hidden  flex flex-col transition duration-500 hover:brightness-110">
+          <button className="font-bold text-sm rab-button   mt-2  cursor-pointer  overflow-hidden  flex flex-col hover:brightness-110">
             {buttonTitle} {"->"}
-            <span className=" h-0.5 bg-rab-neon -translate-x-full group-hover:translate-x-0 w-[85%] transition-transform duration-500"></span>
+            <span className=" h-0.5 rab-button-row   -translate-x-full group-hover:translate-x-0 w-[85%] "></span>
           </button>
         </div>
       </div>
