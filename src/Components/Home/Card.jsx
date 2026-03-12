@@ -13,7 +13,7 @@ const Card = ({ logo, title, desc, buttonTitle, aos, delay }) => {
     <div
       data-aos="flip-left"
       data-aos-delay={delay}
-      className="py-2 px-4 flex-1   shadow-2xl group  rounded-md flex flex-col  gap-5 md:gap-2"
+      className="py-2 px-4 flex-1   shadow-[0_0_20px_rgba(0,0,0,0.15)] group  rounded-md flex flex-col  gap-5 md:gap-2"
     >
       <img src={logo} alt={logo} className="w-15 h-15  " />
       <div className="flex flex-col">

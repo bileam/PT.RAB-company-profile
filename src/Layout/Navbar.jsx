@@ -16,7 +16,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Portofolio", path: "/portofolio" },
-    { name: "Layanan", path: "/layanan" },
+    { name: "Services", path: "/layanan" },
   ];
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const Navbar = () => {
         </div>
 
         {/* DESKTOP MENU */}
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex lg:gap-8 md:gap-4">
           {Menu.map((item, index) => (
             <NavLink
               key={index}

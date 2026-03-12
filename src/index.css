@@ -65,6 +65,12 @@
   }
 
   .rab-title-navy {
-    @apply text-rab-navy dark:text-rab-neon transition-colors duration-300;
+    @apply text-rab-navy dark:text-rab-neon transition-colors duration-300 font-bold md:text-3xl text-xl text-center;
+  }
+  .tx-rab-navy {
+    @apply text-rab-navy dark:text-rab-green transition-colors duration-300;
+  }
+  .tx-rab-green {
+    @apply dark:text-rab-navy text-rab-green transition-colors duration-300;
   }
 }
