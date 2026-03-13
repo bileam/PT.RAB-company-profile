@@ -1,14 +1,5 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 const Card = ({ logo, title, desc, buttonTitle, aos, delay }) => {
-  useEffect(() => {
-    AOS.init({
-      duration: 2000, // durasi animasi
-      once: true, // animasi hanya sekali
-      offset: 100, // jarak trigger
-    });
-  }, []);
   return (
     <div
       data-aos="flip-left"

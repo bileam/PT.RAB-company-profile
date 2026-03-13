@@ -1,16 +1,16 @@
 import gambar from "../assets/image/home.jpg";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import { useEffect } from "react";
 import RotatingText from "./Animation/RotatingText";
 const Banner = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // durasi animasi
-      once: true, // animasi hanya sekali
-      offset: 100, // jarak trigger
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000, // durasi animasi
+  //     once: true, // animasi hanya sekali
+  //     offset: 100, // jarak trigger
+  //   });
+  // }, []);
   return (
     <section className="bg-rab-light   relative">
       {/* Menggunakan font heading dan warna dark */}

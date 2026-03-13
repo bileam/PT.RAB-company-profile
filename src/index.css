@@ -38,8 +38,11 @@
 
 /* responsive conteiner */
 @layer components {
-  .section-container {
+  /* .section-container {
     @apply py-0 px-2 md:px-4 2xl:px-24 container mx-auto;
+  } */
+  .section-container {
+    @apply md:px-4 px-2 2xl:container mx-auto;
   }
 
   /* stars modals Home */

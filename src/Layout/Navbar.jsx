@@ -56,7 +56,7 @@ const Navbar = () => {
       }
       `}
     >
-      <div className="container mx-auto flex justify-between items-center py-4 md:py-2 px-2 md:px-4 2xl:px-24">
+      <div className="2xl:container mx-auto px-2 py-4 flex justify-between items-center ">
         {/* LOGO */}
         <div className="flex gap-2 items-center">
           <img src={logoRab} alt="logo" className="md:w-15 w-10 object-cover" />

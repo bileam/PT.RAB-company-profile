@@ -5,7 +5,7 @@ import Title from "../Title";
 const Jasa = () => {
   return (
     <div className="flex flex-col gap-4  mt-5 ">
-      <Title>Out Services</Title>
+      <Title aos="fade-up">Out Services</Title>
       <div className="flex md:flex-row flex-col gap-2">
         <Card
           delay={200}

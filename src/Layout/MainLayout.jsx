@@ -10,7 +10,7 @@ const MainLayout = () => {
       <main className="pt-20 md:pt-22 grow">
         <Outlet />
       </main>
-      <footer className="w-full  bottom-0 text-white mt-10 ">
+      <footer className="w-full  bottom-0   dark:bg-gray-800/20 bg-gray-800 transition-colors duration-300 mt-10 ">
         <Footer />
       </footer>
     </div>
