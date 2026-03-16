@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="flex justify-between md:flex-row flex-col gap-6 md:gap-0">
         {/* untuk gambar */}
         <div
-          data-aos="fade-up"
-          data-aos-delay="200"
+          // data-aos="fade-up"
+          // data-aos-delay="200"
           className="flex gap-2 items-center"
         >
           <img src={logoRab} alt="logo" className="md:w-15 w-10 object-cover" />
@@ -26,8 +26,8 @@ const Footer = () => {
         {/* menu */}
         <div className="flex justify-between md:gap-10">
           <div
-            data-aos="fade-up"
-            data-aos-delay="400"
+            // data-aos="fade-up"
+            // data-aos-delay="400"
             className="flex flex-col gap-4 border-white "
           >
             <h1 className="text-rab-neon transition-colors duration-300 font-bold">
@@ -42,8 +42,8 @@ const Footer = () => {
           </div>
           {/* hubungi kami */}
           <div
-            data-aos="fade-up"
-            data-aos-delay="600"
+            // data-aos="fade-up"
+            // data-aos-delay="600"
             className="flex flex-col gap-4"
           >
             <h1 className="text-rab-neon transition-colors duration-300 font-bold">
@@ -68,7 +68,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div data-aos="fade-up" data-aos-delay="1000" className="mt-4 ">
+      <div
+        // data-aos="fade-up" data-aos-delay="1000"
+        className="mt-4 "
+      >
         <h1 className="text-rab-navy md:text-md text-sm">
           @2026 PT. RENOL ANUGRAH BERSAMA, by bileam mangalla
         </h1>

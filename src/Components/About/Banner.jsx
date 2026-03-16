@@ -1,7 +1,7 @@
 import banner from "../../assets/image/home.jpg";
 const Banner = ({ image, children }) => {
   return (
-    <div className="h-50 md:h-150 2xl:h-200 banner-diagonal overflow-hidden relative">
+    <div className="h-50 md:h-100 2xl:h-150 banner-diagonal overflow-hidden relative">
       <img src={image} alt="" className="w-full    h-full object-cover " />
       {/* <div className="absolute inset-0 "></div> */}
       <div className=" absolute flex items-center   inset-0 bg-black/50">

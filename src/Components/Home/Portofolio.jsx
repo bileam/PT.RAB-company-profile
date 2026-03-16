@@ -1,45 +1,46 @@
 import Title from "../Title";
 import satu from "../../assets/image/home.jpg";
 import { NavLink, useNavigate } from "react-router-dom";
+import { projects } from "../../Data/projects";
 const Portofolio = () => {
   const navigasi = useNavigate();
-  const projects = [
-    {
-      id: 1,
-      title: "Renovasi Rumah Modern",
-      location: "Tangerang",
-      date: "09 Januari 2026",
-      image: satu,
-    },
-    {
-      id: 2,
-      title: "Desain Interior Minimalis",
-      location: "Jakarta",
-      date: "12 Februari 2026",
-      image: satu,
-    },
-    {
-      id: 3,
-      title: "Pembangunan Rumah",
-      location: "Bandung",
-      date: "05 Maret 2026",
-      image: satu,
-    },
-    {
-      id: 4,
-      title: "Renovasi Kantor",
-      location: "Surabaya",
-      date: "20 April 2026",
-      image: satu,
-    },
-    {
-      id: 5,
-      title: "Interior Apartemen",
-      location: "Bekasi",
-      date: "10 Mei 2026",
-      image: satu,
-    },
-  ];
+
+  //   {
+  //     id: 1,
+  //     title: "Renovasi Rumah Modern",
+  //     location: "Tangerang",
+  //     date: "09 Januari 2026",
+  //     image: satu,
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Desain Interior Minimalis",
+  //     location: "Jakarta",
+  //     date: "12 Februari 2026",
+  //     image: satu,
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Pembangunan Rumah",
+  //     location: "Bandung",
+  //     date: "05 Maret 2026",
+  //     image: satu,
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Renovasi Kantor",
+  //     location: "Surabaya",
+  //     date: "20 April 2026",
+  //     image: satu,
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Interior Apartemen",
+  //     location: "Bekasi",
+  //     date: "10 Mei 2026",
+  //     image: satu,
+  //   },
+  // ];
 
   return (
     <div className="flex flex-col gap-4 py-6 overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.15)] px-4 rounded-md">

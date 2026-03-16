@@ -4,7 +4,7 @@ import CardPorto from "../Components/Portofolio/CardPorto";
 import satu from "../assets/image/home.jpg";
 import Button from "../Components/Portofolio/Button";
 import { useState, useEffect } from "react";
-
+import { projects } from "../Data/projects";
 const Portofolio = () => {
   const [active, setActive] = useState("Semua");
   const [currentPage, setCurrentPage] = useState(1);
@@ -36,88 +36,88 @@ const Portofolio = () => {
     setCurrentPage(1);
   }, [itemsPerPage]);
 
-  const projects = [
-    {
-      id: 1,
-      title: "Renovasi Rumah Modern",
-      kategori: "Interior",
-      location: "Tangerang",
-      date: "09 Januari 2026",
-      image: satu,
-    },
-    {
-      id: 2,
-      title: "Desain Interior Minimalis",
-      kategori: "Rumah",
-      location: "Jakarta",
-      date: "12 Februari 2026",
-      image: satu,
-    },
-    {
-      id: 3,
-      title: "Pembangunan Rumah",
-      kategori: "Interior",
-      location: "Bandung",
-      date: "05 Maret 2026",
-      image: satu,
-    },
-    {
-      id: 4,
-      title: "Renovasi Kantor",
-      kategori: "Rumah",
-      location: "Surabaya",
-      date: "20 April 2026",
-      image: satu,
-    },
-    {
-      id: 5,
-      title: "Interior Apartemen",
-      kategori: "Interior",
-      location: "Bekasi",
-      date: "10 Mei 2026",
-      image: satu,
-    },
-    {
-      id: 6,
-      title: "Renovasi Villa",
-      kategori: "Rumah",
-      location: "Bali",
-      date: "15 Juni 2026",
-      image: satu,
-    },
-    {
-      id: 7,
-      title: "Interior Hotel",
-      kategori: "Interior",
-      location: "Yogyakarta",
-      date: "10 Juli 2026",
-      image: satu,
-    },
-    {
-      id: 8,
-      title: "Pembangunan Ruko",
-      kategori: "Rumah",
-      location: "Makassar",
-      date: "20 Juli 2026",
-      image: satu,
-    },
-    {
-      id: 9,
-      title: "Desain Cafe",
-      kategori: "Interior",
-      location: "Bandung",
-      date: "01 Agustus 2026",
-      image: satu,
-    },
-    {
-      id: 10,
-      title: "Desain Cafe",
-      kategori: "Interior",
-      location: "Bandung",
-      date: "01 Agustus 2026",
-      image: satu,
-    },
-  ];
+  //   const projects = [
+  //     {
+  //       id: 1,
+  //       title: "Renovasi Rumah Modern",
+  //       kategori: "Interior",
+  //       location: "Tangerang",
+  //       date: "09 Januari 2026",
+  //       image: satu,
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "Desain Interior Minimalis",
+  //       kategori: "Rumah",
+  //       location: "Jakarta",
+  //       date: "12 Februari 2026",
+  //       image: satu,
+  //     },
+  //     {
+  //       id: 3,
+  //       title: "Pembangunan Rumah",
+  //       kategori: "Interior",
+  //       location: "Bandung",
+  //       date: "05 Maret 2026",
+  //       image: satu,
+  //     },
+  //     {
+  //       id: 4,
+  //       title: "Renovasi Kantor",
+  //       kategori: "Rumah",
+  //       location: "Surabaya",
+  //       date: "20 April 2026",
+  //       image: satu,
+  //     },
+  //     {
+  //       id: 5,
+  //       title: "Interior Apartemen",
+  //       kategori: "Interior",
+  //       location: "Bekasi",
+  //       date: "10 Mei 2026",
+  //       image: satu,
+  //     },
+  //     {
+  //       id: 6,
+  //       title: "Renovasi Villa",
+  //       kategori: "Rumah",
+  //       location: "Bali",
+  //       date: "15 Juni 2026",
+  //       image: satu,
+  //     },
+  //     {
+  //       id: 7,
+  //       title: "Interior Hotel",
+  //       kategori: "Interior",
+  //       location: "Yogyakarta",
+  //       date: "10 Juli 2026",
+  //       image: satu,
+  //     },
+  //     {
+  //       id: 8,
+  //       title: "Pembangunan Ruko",
+  //       kategori: "Rumah",
+  //       location: "Makassar",
+  //       date: "20 Juli 2026",
+  //       image: satu,
+  //     },
+  //     {
+  //       id: 9,
+  //       title: "Desain Cafe",
+  //       kategori: "Interior",
+  //       location: "Bandung",
+  //       date: "01 Agustus 2026",
+  //       image: satu,
+  //     },
+  //     {
+  //       id: 10,
+  //       title: "Desain Cafe",
+  //       kategori: "Interior",
+  //       location: "Bandung",
+  //       date: "01 Agustus 2026",
+  //       image: satu,
+  //     },
+  //   ];
 
   // filter kategori
   const filteredProjects =
@@ -178,7 +178,7 @@ const Portofolio = () => {
           <span className="font-extrabold">Home</span> <span>{">"}</span>{" "}
           <span>Tentang Kami</span>
         </h1>
-        <div className="flex gap-2">
+        <div data-aos="fade-up" data-aos-delay="400" className="flex gap-2">
           <Button
             active={active === "Semua"}
             onClick={() => {
@@ -211,6 +211,8 @@ const Portofolio = () => {
         </div>
 
         <div
+          data-aos="fade-up"
+          data-aos-delay="800"
           className="
           grid
           grid-cols-2
