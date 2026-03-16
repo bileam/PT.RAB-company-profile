@@ -1,6 +1,8 @@
 import Title from "../Title";
 import satu from "../../assets/image/home.jpg";
+import { NavLink, useNavigate } from "react-router-dom";
 const Portofolio = () => {
+  const navigasi = useNavigate();
   const projects = [
     {
       id: 1,
@@ -79,7 +81,11 @@ const Portofolio = () => {
         // data-aos-delay={delay}
         className="flex md:justify-end justify-center"
       >
-        <button className="md:px-10 px-6 py-2  text-[0.9rem] dark:bg-rab-neon bg-rab-navy dark:text-black text-rab-light transition-colors duration-300 rounded-lg hover:brightness-110 ">
+        <button
+          // to="/portofolio"
+          onClick={() => navigasi("/portofolio")}
+          className="md:px-10 px-6 py-2 cursor-pointer  text-[0.9rem] dark:bg-rab-neon bg-rab-navy dark:text-black text-rab-light transition-colors duration-300 rounded-lg hover:brightness-110 "
+        >
           lihat selengkapnya
         </button>
       </div>

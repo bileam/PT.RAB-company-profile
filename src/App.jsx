@@ -10,6 +10,7 @@ import MainLayout from "./Layout/MainLayout";
 import Home from "./Pages/Home";
 import Belajar from "./Pages/Belajar";
 import About from "./Pages/About";
+import Portofolio from "./Pages/Portofolio";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,6 +31,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/portofolio" element={<Portofolio />} />
         </Route>
       </Routes>
     </Router>

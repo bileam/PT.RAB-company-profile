@@ -2,11 +2,12 @@ import Banner from "../Components/About/Banner";
 import MemiliKami from "../Components/About/MemiliKami";
 import Tentang from "../Components/About/Tentang";
 import Tim from "../Components/About/Tim";
+import banner from "../assets/image/home.jpg";
 
 const About = () => {
   return (
     <div className="md:mt-4">
-      <Banner />
+      <Banner image={banner}>Tentang Kami</Banner>
       <div className="section-container flex flex-col gap-2">
         <h1
           data-aos="fade-up"
@@ -17,8 +18,8 @@ const About = () => {
           <span>Tentang Kami</span>
         </h1>
         <Tentang />
-        <MemiliKami />
         <Tim />
+        <MemiliKami />
       </div>
     </div>
   );
