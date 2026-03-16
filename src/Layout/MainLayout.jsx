@@ -10,7 +10,8 @@ const MainLayout = () => {
       <main className="pt-20 md:pt-22 grow">
         <Outlet />
       </main>
-      <footer className="w-full  bottom-0   dark:bg-gray-800/20 bg-gray-800 transition-colors duration-300 mt-10 ">
+      <div className="bg-rab-navy mt-6">sfsaf</div>
+      <footer className="w-full    dark:bg-gray-800/20 bg-gray-800 transition-colors duration-300  ">
         <Footer />
       </footer>
     </div>

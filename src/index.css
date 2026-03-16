@@ -36,11 +36,17 @@
   }
 }
 
+/* .banner-diagonal {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+} */
 /* responsive conteiner */
 @layer components {
   /* .section-container {
     @apply py-0 px-2 md:px-4 2xl:px-24 container mx-auto;
   } */
+  .banner-diagonal {
+    @apply [clip-path:polygon(0_0,100%_0,100%_100%,0_90%)];
+  }
   .section-container {
     @apply md:px-4 px-2 2xl:container mx-auto;
   }
@@ -75,5 +81,15 @@
   }
   .tx-rab-green {
     @apply dark:text-rab-navy text-rab-green transition-colors duration-300;
+  }
+
+  /* navy white */
+  .tx-navy {
+    @apply text-rab-navy dark:text-rab-light transition-colors duration-300;
+  }
+
+  /* white to dark */
+  .tx-light {
+    @apply text-rab-dark dark:text-rab-light transition-colors duration-300;
   }
 }

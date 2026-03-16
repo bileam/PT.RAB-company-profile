@@ -1,5 +1,13 @@
 import { useEffect } from "react";
-const Card = ({ logo, title, desc, buttonTitle, aos, delay }) => {
+const Card = ({
+  logo,
+  title,
+  desc,
+  buttonTitle,
+  aos,
+  delay,
+  className = " ",
+}) => {
   return (
     <div
       data-aos="flip-left"
@@ -10,8 +18,10 @@ const Card = ({ logo, title, desc, buttonTitle, aos, delay }) => {
       <div className="flex flex-col">
         <h1 className=" rab-title font-bold">{title}</h1>
         <p className="text-[0.9rem] rab-p">{desc}</p>
-        <div className="">
-          <button className="font-bold text-sm rab-button   mt-2  cursor-pointer  overflow-hidden  flex flex-col hover:brightness-110">
+        <div>
+          <button
+            className={`font-bold  text-sm rab-button ${className}   mt-2  cursor-pointer  overflow-hidden  flex flex-col hover:brightness-110`}
+          >
             {buttonTitle} {"->"}
             <span className=" h-0.5 rab-button-row   -translate-x-full group-hover:translate-x-0 w-[85%] "></span>
           </button>
