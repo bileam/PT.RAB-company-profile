@@ -43,8 +43,10 @@ const Banner = () => {
             data-aos-delay="400"
             className="mt-4 md:text-lg font-body text-white max-w-2xl"
           >
-            PT. Ranol Anugrah Bersama menyediakan alat konstruksi berkualitas
-            dan layanan desain renovasi rumah impian.
+            PT. Ranol Anugrah Bersama menyediakan bahan-bahan konstruksi dan
+            design & build bagunan hunian, waterproofing, flooring ( epoxy &
+            Floorhardener), concrite Repair, dan pekerjaan chemical konstruksi
+            lainnya.
           </p>
           <button
             data-aos="fade-up"
