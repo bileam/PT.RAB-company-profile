@@ -33,7 +33,7 @@ const Footer = () => {
             <h1 className="text-rab-neon transition-colors duration-300 font-bold">
               Menu
             </h1>
-            <div className="items-start flex flex-col gap-2">
+            <div className="items-start flex flex-col gap-2 text-[0.8rem] md:text-[1rem]">
               <button className="text-rab-light">Home</button>
               <button className="text-rab-light">About</button>
               <button className="text-rab-light">Portofolio</button>
@@ -49,7 +49,7 @@ const Footer = () => {
             <h1 className="text-rab-neon transition-colors duration-300 font-bold">
               Hubungi kami
             </h1>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 text-[0.8rem] md:text-[1rem]">
               <div className="flex gap-2">
                 <img src={icon_location} alt="location.svg" />
                 <p className="text-rab-light">
@@ -72,7 +72,7 @@ const Footer = () => {
         // data-aos="fade-up" data-aos-delay="1000"
         className="mt-4 "
       >
-        <h1 className="text-rab-navy md:text-md text-sm">
+        <h1 className="text-rab-navy md:text-[1rem] text-[0.8rem]">
           @2026 PT. RENOL ANUGRAH BERSAMA, by bileam mangalla
         </h1>
       </div>

@@ -22,7 +22,7 @@ const Banner = () => {
           <h1
             data-aos="fade-up"
             data-aos-delay="200"
-            className="font-heading text-4xl md:text-5xl xl:text-6xl transition-colors duration-700 2xl:text-7xl text-rab-light dark:text-rab-neon font-bold leading-tight flex flex-wrap items-center gap-2"
+            className="font-heading text-xl md:text-5xl xl:text-6xl transition-colors duration-700 2xl:text-7xl text-rab-light dark:text-rab-neon font-bold leading-tight flex flex-wrap items-center gap-2"
           >
             Solusi Pembangunan
             <RotatingText
@@ -41,7 +41,7 @@ const Banner = () => {
           <p
             data-aos="fade-up"
             data-aos-delay="400"
-            className="mt-4 md:text-lg font-body text-white max-w-2xl"
+            className="mt-4 md:text-lg font-body md:text-[1rem] text-[0.8rem] text-white max-w-2xl"
           >
             PT. Ranol Anugrah Bersama menyediakan bahan-bahan konstruksi dan
             design & build bagunan hunian, waterproofing, flooring ( epoxy &

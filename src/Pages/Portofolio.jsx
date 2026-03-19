@@ -176,7 +176,7 @@ const Portofolio = () => {
           className="inline-block  md:-translate-y-5 -translate-y-2  items-center tx-navy text-[0.9rem] md:text-[1.2rem]"
         >
           <span className="font-extrabold">Home</span> <span>{">"}</span>{" "}
-          <span>Tentang Kami</span>
+          <span>Portofolio</span>
         </h1>
         <div data-aos="fade-up" data-aos-delay="400" className="flex gap-2">
           <Button
