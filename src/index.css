@@ -63,7 +63,7 @@
     @apply text-rab-green dark:text-rab-navy  transition-all duration-300;
   }
   .rab-button-row {
-    @apply bg-rab-neon dark:bg-rab-navy transition-all duration-500;
+    @apply bg-rab-neon dark:bg-rab-navy transition-all duration-300;
   }
 
   /* end Modals home */
@@ -91,5 +91,18 @@
   /* white to dark */
   .tx-light {
     @apply text-rab-dark dark:text-rab-light transition-colors duration-300;
+  }
+
+  /*  */
+  .text-h1-navy {
+    @apply text-rab-navy dark:text-rab-neon transition-colors duration-300;
+  }
+
+  .text-p-dark {
+    @apply text-rab-dark dark:text-rab-light transition-colors duration-300;
+  }
+
+  .Button-navy {
+    @apply bg-rab-navy text-rab-light dark:bg-rab-neon dark:text-rab-navy transition-colors duration-300;
   }
 }

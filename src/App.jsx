@@ -12,6 +12,7 @@ import Belajar from "./Pages/Belajar";
 import About from "./Pages/About";
 import Portofolio from "./Pages/Portofolio";
 import Layanan from "./Pages/Layanan";
+import Product from "./Pages/Product";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,7 +34,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/portofolio" element={<Portofolio />} />
-          <Route path="/layanan" element={<Layanan />} />
+          {/* <Route path="/layanan" element={<Layanan />} /> */}
+          <Route path="/product" element={<Product />} />
         </Route>
       </Routes>
     </Router>

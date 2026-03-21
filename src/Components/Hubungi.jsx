@@ -19,9 +19,12 @@ const Hubungi = () => {
           </p>
         </div>
         <div className="w-full flex justify-start">
-          <button className="py-1  px-4 md:p-2 dark:bg-rab-neon bg-rab-navy text-white dark:text-black  rounded-md mt-2 text-[0.7rem] md:text-[0.9rem] ">
+          <a
+            href=""
+            className="py-1  px-4 md:p-2 Button-navy  rounded-md mt-2 text-[0.7rem] md:text-[0.9rem] "
+          >
             Konsultasi dengan Kami
-          </button>
+          </a>
         </div>
       </div>
     </div>
