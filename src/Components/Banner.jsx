@@ -27,7 +27,7 @@ const Banner = () => {
             Solusi Pembangunan
             <RotatingText
               texts={["Berkualitas", "Kokoh", "Modern", "Elegan", "Terpercaya"]}
-              mainClassName="px-2 md:px-3 text-[#adff2f] dark:text-[#1d4e89]  overflow-hidden py-1 md:py-2 rounded-lg"
+              mainClassName="px-2 md:px- 3 text-[#adff2f] dark:text-[#1d4e89]  overflow-hidden py-1 md:py-2 rounded-lg"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
