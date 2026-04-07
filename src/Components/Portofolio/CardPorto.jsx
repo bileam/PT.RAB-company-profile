@@ -1,10 +1,10 @@
-const CardPorto = ({ index, item }) => {
+const CardPorto = ({ index, item, onClick }) => {
   return (
     <div
       // data-aos="fade-up"
       // data-aos-delay={index + 200}
       // key={item.id}
-      className={`flex flex-col gap-1 h-80 md:h-60 group rounded-lg shadow-[0_0_20px_rgba(0,0,0,0.15)] w-full
+      className={`flex flex-col relative gap-1 h-80 md:h-60 group rounded-lg shadow-[0_0_20px_rgba(0,0,0,0.15)] w-full
             ${index >= 2 ? "hidden md:flex" : ""}`}
     >
       <div className="md:h-[70%]  h-[90%] relative  overflow-hidden rounded-lg group">
@@ -24,6 +24,12 @@ const CardPorto = ({ index, item }) => {
       <p className="px-4 text-sm dark:text-rab-light transition-colors duration-300">
         {item.location}, {item.date}
       </p>
+      <button
+        onClick={onClick}
+        className="md:absolute bg-rab-navy text-rab-light dark:bg-rab-neon dark:text-black  hover:brightness-110  m-2 md:mx-0 px-2 py-1  top-2 right-2 cursor-pointer rounded-lg"
+      >
+        Lihat sekarang
+      </button>
     </div>
   );
 };

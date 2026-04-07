@@ -7,6 +7,8 @@ export const projects = [
     location: "Tangerang",
     date: "09 Januari 2026",
     image: satu,
+    imageAll: ["", "", ""],
+    description: "Renovasi rumah dengan konsep modern minimalis",
   },
   {
     id: 2,
@@ -15,6 +17,8 @@ export const projects = [
     location: "Jakarta",
     date: "12 Februari 2026",
     image: satu,
+    imageAll: ["", "", ""],
+    description: "Renovasi rumah dengan konsep modern minimalis",
   },
   {
     id: 3,
@@ -23,6 +27,8 @@ export const projects = [
     location: "Bandung",
     date: "05 Maret 2026",
     image: satu,
+    imageAll: ["", "", ""],
+    description: "Renovasi rumah dengan konsep modern minimalis",
   },
   {
     id: 4,
@@ -31,6 +37,8 @@ export const projects = [
     location: "Surabaya",
     date: "20 April 2026",
     image: satu,
+    imageAll: ["", "", ""],
+    description: "Renovasi rumah dengan konsep modern minimalis",
   },
   {
     id: 5,
@@ -39,6 +47,8 @@ export const projects = [
     location: "Bekasi",
     date: "10 Mei 2026",
     image: satu,
+    imageAll: ["", "", ""],
+    description: "Renovasi rumah dengan konsep modern minimalis",
   },
   {
     id: 6,
@@ -47,6 +57,8 @@ export const projects = [
     location: "Bali",
     date: "15 Juni 2026",
     image: satu,
+    imageAll: ["", "", ""],
+    description: "Renovasi rumah dengan konsep modern minimalis",
   },
   {
     id: 7,
@@ -55,6 +67,8 @@ export const projects = [
     location: "Yogyakarta",
     date: "10 Juli 2026",
     image: satu,
+    imageAll: ["", "", ""],
+    description: "Renovasi rumah dengan konsep modern minimalis",
   },
   {
     id: 8,
@@ -63,6 +77,8 @@ export const projects = [
     location: "Makassar",
     date: "20 Juli 2026",
     image: satu,
+    imageAll: ["", "", ""],
+    description: "Renovasi rumah dengan konsep modern minimalis",
   },
   {
     id: 9,
@@ -71,6 +87,8 @@ export const projects = [
     location: "Bandung",
     date: "01 Agustus 2026",
     image: satu,
+    imageAll: ["", "", ""],
+    description: "Renovasi rumah dengan konsep modern minimalis",
   },
   {
     id: 10,
@@ -79,5 +97,7 @@ export const projects = [
     location: "Bandung",
     date: "01 Agustus 2026",
     image: satu,
+    imageAll: ["", "", ""],
+    description: "Renovasi rumah dengan konsep modern minimalis",
   },
 ];

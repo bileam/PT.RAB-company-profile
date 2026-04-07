@@ -1,33 +1,80 @@
 import gambar from "../assets/image/home.jpg";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import RotatingText from "./Animation/RotatingText";
+
 const Banner = () => {
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 1000, // durasi animasi
-  //     once: true, // animasi hanya sekali
-  //     offset: 100, // jarak trigger
-  //   });
-  // }, []);
+  const headingRef = useRef(null);
+  const paraRef = useRef(null);
+  const btnRef = useRef(null);
+  const overlayRef = useRef(null);
+
+  useEffect(() => {
+    // Lightweight CSS-based entrance animation tanpa AOS
+    const elements = [overlayRef, headingRef, paraRef, btnRef];
+    elements.forEach((ref, i) => {
+      if (ref.current) {
+        ref.current.style.opacity = "0";
+        ref.current.style.transform = "translateY(30px)";
+        ref.current.style.transition = `opacity 0.8s ease ${
+          i * 0.2
+        }s, transform 0.8s ease ${i * 0.2}s`;
+
+        // Trigger animation setelah mount
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            if (ref.current) {
+              ref.current.style.opacity = "1";
+              ref.current.style.transform = "translateY(0)";
+            }
+          });
+        });
+      }
+    });
+  }, []);
+
   return (
-    <section className="bg-rab-light   relative">
-      {/* Menggunakan font heading dan warna dark */}
-      <div>
-        <img src={gambar} alt="" className="w-full h-screen object-cover" />
+    <section className="bg-rab-light relative w-full">
+      {/* Gambar background — cover penuh tanpa terpotong paksa */}
+      <div className="w-full h-[60vh] sm:h-[75vh] md:h-screen">
+        <img
+          src={gambar}
+          alt="Banner PT. Ranol Anugrah Bersama"
+          className="w-full h-full object-cover object-center"
+        />
       </div>
-      <div className="absolute top-0 bg-rab-dark/40 dark:bg-rab-dark/70  transition-colors duration-300  shadow-5xl  inset-0 flex flex-col  justify-center ">
-        <div className=" section-container">
+
+      {/* Overlay gradient — lebih kaya dari solid color */}
+      <div
+        ref={overlayRef}
+        className="absolute inset-0 flex flex-col justify-center
+          bg-linear-to-br from-rab-dark/70 via-rab-dark/50 to-transparent
+          dark:from-rab-dark/85 dark:via-rab-dark/65 dark:to-rab-dark/30
+          transition-colors duration-300"
+      >
+        <div className="section-container px-4 sm:px-8">
+          {/* Tagline kecil di atas heading */}
+          <p
+            ref={paraRef}
+            className="mb-3 text-[0.65rem] sm:text-xs md:text-sm tracking-[0.25em] uppercase
+              text-rab-neon font-semibold font-body"
+          >
+            PT. Ranol Anugrah Bersama
+          </p>
+
+          {/* Heading utama */}
           <h1
-            data-aos="fade-up"
-            data-aos-delay="200"
-            className="font-heading text-xl md:text-5xl xl:text-6xl transition-colors duration-700 2xl:text-7xl text-rab-light dark:text-rab-neon font-bold leading-tight flex flex-wrap items-center gap-2"
+            ref={headingRef}
+            className="font-heading font-bold leading-tight
+              text-2xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl
+              text-rab-light dark:text-rab-neon
+              flex flex-wrap items-center gap-x-3 gap-y-1
+              transition-colors duration-700"
           >
             Solusi Pembangunan
             <RotatingText
               texts={["Berkualitas", "Kokoh", "Modern", "Elegan", "Terpercaya"]}
-              mainClassName="px-2 md:px- 3 text-[#adff2f] dark:text-[#1d4e89]  overflow-hidden py-1 md:py-2 rounded-lg"
+              mainClassName="px-2 md:px-3 text-[#adff2f] dark:text-[#1d4e89]
+                overflow-hidden py-1 md:py-2 rounded-lg"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -38,29 +85,54 @@ const Banner = () => {
               rotationInterval={2000}
             />
           </h1>
+
+          {/* Deskripsi */}
           <p
-            data-aos="fade-up"
-            data-aos-delay="400"
-            className="mt-4 md:text-lg font-body md:text-[1rem] text-[0.8rem] text-white max-w-2xl"
+            className="mt-4 md:mt-6 max-w-xl font-body leading-relaxed
+              text-[0.8rem] sm:text-sm md:text-base
+              text-white/90"
           >
             PT. Ranol Anugrah Bersama menyediakan bahan-bahan konstruksi dan
-            design & build bagunan hunian, waterproofing, flooring ( epoxy &
-            Floorhardener), concrite Repair, dan pekerjaan chemical konstruksi
-            lainnya.
+            design &amp; build bangunan hunian, waterproofing, flooring (epoxy
+            &amp; Floorhardener), concrete Repair, dan pekerjaan chemical
+            konstruksi lainnya.
           </p>
-          <button
-            data-aos="fade-up"
-            data-aos-delay="600"
-            // shadow-lg bg-rab-navy
-            className="mt-8 px-8 py-3  border-2 shadow-lg border-rab-neon hover:bg-rab-neon hover:text-rab-dark  text-rab-light font-bold cursor-pointer rounded-lg duration-500  transition-all"
-          >
-            Mulai Konsultasi
-          </button>
-        </div>
 
-        {/* Menggunakan warna neon sebagai tombol aksen */}
+          {/* CTA Button */}
+          <div ref={btnRef} className="mt-8 md:mt-10 flex flex-wrap gap-3">
+            <button
+              className="px-6 sm:px-8 py-2.5 sm:py-3
+                border-2 border-rab-neon
+                text-rab-light font-bold font-body text-sm sm:text-base
+                rounded-lg cursor-pointer
+                hover:bg-rab-neon hover:text-rab-dark
+                active:scale-95
+                shadow-lg shadow-rab-neon/20
+                transition-all duration-300"
+            >
+              Mulai Konsultasi
+            </button>
+
+            <button
+              className="px-6 sm:px-8 py-2.5 sm:py-3
+                text-white/80 font-body text-sm sm:text-base
+                rounded-lg cursor-pointer
+                hover:text-white underline underline-offset-4
+                transition-all duration-300"
+            >
+              Lihat Portofolio →
+            </button>
+          </div>
+
+          {/* Scroll indicator */}
+          <div className="mt-10 md:mt-16 flex items-center gap-2 text-white/50 text-xs font-body">
+            <span className="inline-block w-6 h-[1px] bg-white/40" />
+            Scroll untuk melihat lebih
+          </div>
+        </div>
       </div>
     </section>
   );
 };
+
 export default Banner;

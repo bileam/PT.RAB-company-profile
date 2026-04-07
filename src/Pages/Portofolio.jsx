@@ -5,6 +5,7 @@ import satu from "../assets/image/home.jpg";
 import Button from "../Components/Portofolio/Button";
 import { useState, useEffect } from "react";
 import { projects } from "../Data/projects";
+import { Helmet } from "react-helmet-async";
 const Portofolio = () => {
   const [active, setActive] = useState("Semua");
   const [currentPage, setCurrentPage] = useState(1);
@@ -168,6 +169,20 @@ const Portofolio = () => {
 
   return (
     <div className="md:mt-4">
+      <Helmet>
+        <title>Jasa Konstraksi & renovasi Rumah terpercaya</title>
+        <meta
+          name="Description"
+          content="Jasa  Pembangungan rumah, Renovasi,Desain, dan waterproofing dengan hasil dan harga terjangkau"
+        />
+        {/* open graph (biar bagus kalau di share) */}
+        <meta property="og:title" content="jasa kontruksi terpercaya" />
+        <meta
+          property="og:description"
+          content="Layanan bangunan, desain dan renovasi rumah prefesional"
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Banner image={banner}>PORTOFOLIO</Banner>
       <div className="section-container flex flex-col gap-4">
         <h1
@@ -178,7 +193,11 @@ const Portofolio = () => {
           <span className="font-extrabold">Home</span> <span>{">"}</span>{" "}
           <span>Portofolio</span>
         </h1>
-        <div data-aos="fade-up" data-aos-delay="400" className="flex gap-2">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="400"
+          className="grid grid-cols-2 md:grid-cols-6 gap-2"
+        >
           <Button
             active={active === "Semua"}
             onClick={() => {
@@ -186,9 +205,8 @@ const Portofolio = () => {
               setCurrentPage(1);
             }}
           >
-            Semua
+            Semua Project
           </Button>
-
           <Button
             active={active === "Rumah"}
             onClick={() => {
@@ -196,7 +214,7 @@ const Portofolio = () => {
               setCurrentPage(1);
             }}
           >
-            Rumah
+            Rumah Tinggal
           </Button>
 
           <Button
@@ -206,7 +224,16 @@ const Portofolio = () => {
               setCurrentPage(1);
             }}
           >
-            Interior
+            Renovasi
+          </Button>
+          <Button
+            active={active === ""}
+            onClick={() => {
+              setActive("Interior");
+              setCurrentPage(1);
+            }}
+          >
+            Waterprooping
           </Button>
         </div>
 

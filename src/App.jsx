@@ -13,6 +13,7 @@ import About from "./Pages/About";
 import Portofolio from "./Pages/Portofolio";
 import Layanan from "./Pages/Layanan";
 import Product from "./Pages/Product";
+import NewPorto from "./Pages/NewPorto";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,7 +34,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/portofolio" element={<Portofolio />} />
+          <Route path="/portofolio" element={<NewPorto />} />
           {/* <Route path="/layanan" element={<Layanan />} /> */}
           <Route path="/product" element={<Product />} />
         </Route>

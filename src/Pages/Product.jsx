@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import banner from "../assets/image/home.jpg";
 import Banner from "../Components/About/Banner";
 import Card from "../Components/Product/Card";
@@ -7,6 +8,20 @@ import { Products } from "../Data/Product";
 const Product = () => {
   return (
     <div className="md:mt-4">
+      <Helmet>
+        <title>Jasa Konstraksi & renovasi Rumah terpercaya</title>
+        <meta
+          name="Description"
+          content="Jasa  Pembangungan rumah, Renovasi,Desain, dan waterproofing dengan hasil dan harga terjangkau"
+        />
+        {/* open graph (biar bagus kalau di share) */}
+        <meta property="og:title" content="jasa kontruksi terpercaya" />
+        <meta
+          property="og:description"
+          content="Layanan bangunan, desain dan renovasi rumah prefesional"
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Banner image={banner}>Product Kami</Banner>
       <div className="section-container flex flex-col gap-2">
         <h1

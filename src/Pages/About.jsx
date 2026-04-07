@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Banner from "../Components/About/Banner";
 import MemiliKami from "../Components/About/MemiliKami";
 import Tentang from "../Components/About/Tentang";
@@ -7,6 +8,20 @@ import banner from "../assets/image/home.jpg";
 const About = () => {
   return (
     <div className="md:mt-4">
+      <Helmet>
+        <title>Jasa Konstraksi & renovasi Rumah terpercaya</title>
+        <meta
+          name="Description"
+          content="Jasa  Pembangungan rumah, Renovasi,Desain, dan waterproofing dengan hasil dan harga terjangkau"
+        />
+        {/* open graph (biar bagus kalau di share) */}
+        <meta property="og:title" content="jasa kontruksi terpercaya" />
+        <meta
+          property="og:description"
+          content="Layanan bangunan, desain dan renovasi rumah prefesional"
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Banner image={banner}>Tentang Kami</Banner>
       <div className="section-container flex flex-col gap-2">
         <h1
