@@ -1,110 +1,93 @@
+import { useState } from "react";
 import home from "../../assets/image/home.jpg";
-const Modal = ({ isOpen, oncloce }) => {
+import home2 from "../../assets/image/testhouse.jpg";
+
+const Modal = ({ isOpen, onCloce, data }) => {
   if (!isOpen) return null;
+
+  const images = [home, home2, home, home2];
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const nextSlide = () => {
+    setActiveIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
   return (
-    <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
-      <div className="flex animate-zoomIn flex-col p-5 bg-white rounded-md relative">
-        {/* <div className="absolute top-0  right-1">
-          <button className="p-2 mt-2  border rounded-full" onClick={oncloce}>
-            X
-          </button>
-        </div> */}
-        <div className="w-full flex justify-end top-4  right-4 z-10 absolute">
+    <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 ">
+      <div className="flex animate-zoomIn flex-col p-5 md:max-h-[90%] md:max-w-[80%]  bg-white dark:bg-gray-900 transition-colors duration-500 rounded-md relative">
+        <div className="absolute top-4 right-4 z-10">
           <button
-            onClick={oncloce}
-            className="w-10 h-10 rounded-full shadow-md bg-black/40"
+            onClick={onCloce}
+            className="w-10 h-10 rounded-full shadow-md bg-rab-navy dark:bg-rab-neon dark:text-black text-white"
           >
             X
           </button>
         </div>
-        <div className="flex flex-col  gap-2 md:py-2 md:px-6">
-          <div className="flex gap-2 md:flex-row flex-col">
-            <div className="flex flex-col gap-2">
-              <div className="relative ">
+        <div className="flex flex-col md:flex-row gap-4 md:px-6 ">
+          <div className="flex flex-col gap-2 md:max-w-[70%] md:min-w-[70%]  md:h-[90%]">
+            <div className="relative overflow-hidden rounded-md">
+              <div className="md:w-full md:h-[90%] ">
                 <img
-                  src={home}
-                  alt=""
-                  className="w-100 md:50 object-cover h-50 rounded-md shadow"
+                  key={activeIndex}
+                  src={images[activeIndex]}
+                  className=" object-cover  w-full md:h-[90%]  rounded-md shadow fade-image"
                 />
-                <button className="absolute top-[40%] left-2 p-2 bg-white text-black w-10 h-10 rounded-full font-extrabold">
-                  {"<"}
-                </button>
-                <button className="absolute top-[40%] right-2 p-2 bg-white text-black w-10 h-10 rounded-full font-extrabold">
-                  {">"}
-                </button>
               </div>
-              <div className="flex gap-4">
-                <button>
-                  <img
-                    src={home}
-                    alt=""
-                    className="w-15 h-15 shadow-md object-cover border-2 border-rab-navy rounded-md"
-                  />
-                </button>
-                <button>
-                  {" "}
-                  <img
-                    src={home}
-                    alt=""
-                    className="w-15 h-15 shadow-md object-cover  rounded-md "
-                  />
-                </button>
-                <button>
-                  {" "}
-                  <img
-                    src={home}
-                    alt=""
-                    className="w-15 h-15 shadow-md object-cover  rounded-md "
-                  />
-                </button>
-                <button>
-                  {" "}
-                  <img
-                    src={home}
-                    alt=""
-                    className="w-15 h-15 shadow-md object-cover  rounded-md "
-                  />
-                </button>
-              </div>
+
+              <button
+                onClick={prevSlide}
+                className="absolute top-1/2 -translate-y-1/2 left-2 bg-white w-10 h-10 rounded-full shadow"
+              >
+                {"<"}
+              </button>
+
+              <button
+                onClick={nextSlide}
+                className="absolute top-1/2 -translate-y-1/2 right-2 bg-white w-10 h-10 rounded-full shadow"
+              >
+                {">"}
+              </button>
+            </div>
+
+            <div className="flex gap-3">
+              {images.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  onClick={() => setActiveIndex(index)}
+                  className={`w-16 h-16 object-cover rounded-md cursor-pointer transition-all duration-300
+                    ${
+                      activeIndex === index
+                        ? "border-2 border-rab-navy scale-105"
+                        : "opacity-70"
+                    }`}
+                />
+              ))}
             </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <h1 className="font-bold">Rumah Modern Minimalis</h1>
-            <div className="flex gap-2">
-              <img src="" alt="" />
-              <p className="text-[0.8rem]">jakarta selatan, 2024</p>
-            </div>
-            <p className="text-[0.8rem]">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Doloremque molestias laboriosam fuga nesciunt numquam eveniet
-              adipisci velit dolores, voluptates esse neque ex qui soluta
-              consectetur fugit quaerat delectus. A, voluptate.
+
+          <div className="flex flex-col gap-2 dark:text-white md:w-[30%]">
+            <h1 className="font-bold dark:text-white">
+              Rumah Modern Minimalis
+            </h1>
+            <p className="text-sm">Jakarta Selatan, 2024</p>
+
+            <p className="text-sm h-50 md:h-80 overflow-hidden">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. lorem
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Repudiandae, ipsum. Quidem eos iusto amet totam! Dolor
+              consequuntur veritatis dolorum cumque rem sint error officiis ea
+              ullam saepe, recusandae fuga labore! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Ea, vitae cupiditate? Ullam facilis
+              cumque velit molestias sint excepturi labore dolor. Quasi est quia
+              qui laborum voluptatum nulla praesentium possimus tempora! lorem
             </p>
-            <div>
-              <h2 className="flex flex-col gap-2 text-[1rem]">Fitur Utama</h2>
-              <div className="flex gap-2">
-                <img src="" alt="" />
-                <p className="text-[0.8rem]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-                  quae?
-                </p>
-              </div>
-              <div className="flex gap-2">
-                <img src="" alt="" />
-                <p className="text-[0.8rem]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-                  quae?
-                </p>
-              </div>
-              <div className="flex gap-2">
-                <img src="" alt="" />
-                <p className="text-[0.8rem]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
-                  quae?
-                </p>
-              </div>
-            </div>
-            <button className="bg-rab-navy p-2 rounded-md text-white">
+
+            <button className="bg-rab-navy  dark:bg-rab-neon  dark:text-black hover:brightness-110 cursor-pointer p-2 rounded-md text-white">
               Konsultasi sekarang
             </button>
           </div>
@@ -113,4 +96,5 @@ const Modal = ({ isOpen, oncloce }) => {
     </div>
   );
 };
+
 export default Modal;

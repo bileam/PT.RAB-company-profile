@@ -103,7 +103,7 @@ const NewPorto = () => {
           ))}
         </div>
       </div>
-      <Modal isOpen={modal} oncloce={() => setmodal(false)} />
+      <Modal isOpen={modal} onCloce={() => setmodal(false)} />
     </div>
   );
 };
