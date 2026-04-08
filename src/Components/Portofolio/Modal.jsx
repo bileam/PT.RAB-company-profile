@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import home from "../../assets/image/home.jpg";
 import home2 from "../../assets/image/testhouse.jpg";
 
 const Modal = ({ isOpen, onCloce, data }) => {
-  if (!isOpen) return null;
+  if (!isOpen || !data) return null;
 
-  const images = [home, home2, home, home2];
+  // const images = [home, home2, home, home2];
+  const images = data?.imageAll || [];
   const [activeIndex, setActiveIndex] = useState(0);
 
   const nextSlide = () => {
@@ -15,6 +16,9 @@ const Modal = ({ isOpen, onCloce, data }) => {
   const prevSlide = () => {
     setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [data]);
 
   return (
     <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 ">
@@ -30,12 +34,14 @@ const Modal = ({ isOpen, onCloce, data }) => {
         <div className="flex flex-col md:flex-row gap-4 md:px-6 ">
           <div className="flex flex-col gap-2 md:max-w-[70%] md:min-w-[70%]  md:h-[90%]">
             <div className="relative overflow-hidden rounded-md">
-              <div className="md:w-full md:h-[90%] ">
-                <img
-                  key={activeIndex}
-                  src={images[activeIndex]}
-                  className=" object-cover  w-full md:h-[90%]  rounded-md shadow fade-image"
-                />
+              <div className="w-full bg-black/10 flex items-center justify-center rounded-md overflow-hidden">
+                {images.length > 0 && (
+                  <img
+                    key={activeIndex}
+                    src={images[activeIndex]}
+                    className="w-full h-62.5 md:h-100.5 2xl:h-150  object-contain rounded-md fade-image"
+                  />
+                )}
               </div>
 
               <button
@@ -71,20 +77,11 @@ const Modal = ({ isOpen, onCloce, data }) => {
           </div>
 
           <div className="flex flex-col gap-2 dark:text-white md:w-[30%]">
-            <h1 className="font-bold dark:text-white">
-              Rumah Modern Minimalis
-            </h1>
-            <p className="text-sm">Jakarta Selatan, 2024</p>
+            <h1 className="font-bold dark:text-white">{data.title}</h1>
+            <p className="text-sm">{data.date}</p>
 
             <p className="text-sm h-50 md:h-80 overflow-hidden">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. lorem
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae, ipsum. Quidem eos iusto amet totam! Dolor
-              consequuntur veritatis dolorum cumque rem sint error officiis ea
-              ullam saepe, recusandae fuga labore! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Ea, vitae cupiditate? Ullam facilis
-              cumque velit molestias sint excepturi labore dolor. Quasi est quia
-              qui laborum voluptatum nulla praesentium possimus tempora! lorem
+              {data.description}
             </p>
 
             <button className="bg-rab-navy  dark:bg-rab-neon  dark:text-black hover:brightness-110 cursor-pointer p-2 rounded-md text-white">

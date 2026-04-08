@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 import Modal from "../Components/Portofolio/Modal";
 const NewPorto = () => {
   const [active, setActive] = useState("Semua");
+  const [selectItem, setSelectItem] = useState(null);
   const [modal, setmodal] = useState(false);
   const filterkategori =
     active === "Semua"
@@ -54,9 +55,9 @@ const NewPorto = () => {
             Semua Project
           </Button>
           <Button
-            active={active === "Rumah"}
+            active={active === "Desain"}
             onClick={() => {
-              setActive("Rumah");
+              setActive("Desain");
               //   setCurrentPage(1);
             }}
           >
@@ -64,9 +65,9 @@ const NewPorto = () => {
           </Button>
 
           <Button
-            active={active === "Interior"}
+            active={active === "Renovasi"}
             onClick={() => {
-              setActive("Interior");
+              setActive("Renovasi");
               //   setCurrentPage(1);
             }}
           >
@@ -98,12 +99,15 @@ const NewPorto = () => {
               key={item.id}
               item={item}
               index={index}
-              onClick={() => setmodal(true)}
+              onClick={() => {
+                setSelectItem(item);
+                setmodal(true);
+              }}
             />
           ))}
         </div>
       </div>
-      <Modal isOpen={modal} onCloce={() => setmodal(false)} />
+      <Modal isOpen={modal} onCloce={() => setmodal(false)} data={selectItem} />
     </div>
   );
 };

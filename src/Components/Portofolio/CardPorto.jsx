@@ -9,11 +9,10 @@ const CardPorto = ({ index, item, onClick }) => {
     >
       <div className="md:h-[70%]  h-[90%] relative  overflow-hidden rounded-lg group">
         <img
-          src={item.image}
+          src={item.imageAll[0]}
           alt={item.title}
           className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-115"
         />
-
         <div className="absolute inset-0  dark:bg-rab-dark/40 rounded-lg transition"></div>
       </div>
 
