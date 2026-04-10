@@ -33,7 +33,7 @@ const About = () => {
           <span>Tentang Kami</span>
         </h1>
         <Tentang />
-        <Tim />
+        {/* <Tim /> */}
         <MemiliKami />
       </div>
     </div>

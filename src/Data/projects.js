@@ -19,6 +19,36 @@ export const projects = [
     description:
       "desain Rumah 1 lantai ukurang 10 x 13m dengan konsep modern dan tata ruang yang nyaman untuk keluarga, dari depan sampai visual 3D, semua di rancang supaya anda bisa melihat gambar rumah impian sebelum dibangun.",
   },
+  {
+    id: 1,
+    title: "Desain rumah Modern",
+    kategori: "Desain",
+    location: "-",
+    date: "-",
+    imageAll: [
+      desainRumahModern1,
+      desainRumahModern2,
+      desainRumahModern3,
+      desainRumahModern4,
+    ],
+    description:
+      "desain Rumah 1 lantai ukurang 10 x 13m dengan konsep modern dan tata ruang yang nyaman untuk keluarga, dari depan sampai visual 3D, semua di rancang supaya anda bisa melihat gambar rumah impian sebelum dibangun.",
+  },
+  {
+    id: 1,
+    title: "Desain rumah Modern",
+    kategori: "Desain",
+    location: "-",
+    date: "-",
+    imageAll: [
+      desainRumahModern1,
+      desainRumahModern2,
+      desainRumahModern3,
+      desainRumahModern4,
+    ],
+    description:
+      "desain Rumah 1 lantai ukurang 10 x 13m dengan konsep modern dan tata ruang yang nyaman untuk keluarga, dari depan sampai visual 3D, semua di rancang supaya anda bisa melihat gambar rumah impian sebelum dibangun.",
+  },
   // {
   //   id: 2,
   //   title: "Desain Interior Minimalis",

@@ -13,7 +13,7 @@ const Home = () => {
           name="Description"
           content="Jasa  Pembangungan rumah, Renovasi,Desain, dan waterproofing dengan hasil dan harga terjangkau"
         />
-        {/* open graph (biar bagus kalau di share) */}
+
         <meta property="og:title" content="jasa kontruksi terpercaya" />
         <meta
           property="og:description"

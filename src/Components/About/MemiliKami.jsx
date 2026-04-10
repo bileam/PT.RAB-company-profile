@@ -5,7 +5,7 @@ import pengalaman from "../../assets/logo/berpengalaman.png";
 import prefesional from "../../assets/logo/prefesional.png";
 const MemiliKami = () => {
   return (
-    <div className="mb-5    flex flex-col gap-6 ">
+    <div className="mb-5 mt-4    flex flex-col gap-6 ">
       <div className="flex">
         <Title aos="fade-up">Mengapa memili kami?</Title>
       </div>

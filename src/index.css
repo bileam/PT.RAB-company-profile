@@ -53,7 +53,7 @@
 
   /* stars modals Home */
   .rab-title {
-    @apply text-rab-navy dark:text-rab-neon transition-colors;
+    @apply text-rab-navy dark:text-rab-neon transition-colors duration-300;
   }
   .rab-p {
     @apply dark:text-rab-light transition-colors duration-300;

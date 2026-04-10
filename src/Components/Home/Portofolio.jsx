@@ -47,7 +47,6 @@ const Portofolio = () => {
       <div className="flex">
         <Title aos="fade-up">New Portofolio</Title>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {projects.slice(0, 4).map((item, index) => (
           <div
@@ -59,18 +58,15 @@ const Portofolio = () => {
           >
             <div className="md:h-[70%]  h-[90%] relative  overflow-hidden rounded-lg group">
               <img
-                src={item.image}
+                src={item.imageAll[0]}
                 alt={item.title}
                 className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-115"
               />
-
               <div className="absolute inset-0  dark:bg-rab-dark/40 rounded-lg transition"></div>
             </div>
-
             <h1 className="px-4 font-semibold tx-rab-navy transition-colors duration-300">
               {item.title}
             </h1>
-
             <p className="px-4 text-sm dark:text-rab-light transition-colors duration-300">
               {item.location}, {item.date}
             </p>

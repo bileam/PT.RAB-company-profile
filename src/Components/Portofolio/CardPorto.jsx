@@ -23,12 +23,14 @@ const CardPorto = ({ index, item, onClick }) => {
       <p className="px-4 text-sm dark:text-rab-light transition-colors duration-300">
         {item.location}, {item.date}
       </p>
-      <button
-        onClick={onClick}
-        className="md:absolute bg-rab-navy text-rab-light dark:bg-rab-neon dark:text-black  hover:brightness-110  m-2 md:mx-0 px-2 py-1  top-2 right-2 cursor-pointer rounded-lg"
-      >
-        Lihat sekarang
-      </button>
+      <div className="px-2">
+        <button
+          onClick={onClick}
+          className=" bg-rab-navy w-full text-rab-light dark:bg-rab-neon dark:text-black   hover:brightness-110  m-2 md:mx-0 px-2 md:py-2 py-1  top-2 right-2 cursor-pointer rounded-lg"
+        >
+          Lihat sekarang
+        </button>
+      </div>
     </div>
   );
 };
